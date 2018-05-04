@@ -1,0 +1,76 @@
+{% extends "layout.njk" %}
+
+
+{% block content %}
+
+<h1 class="mt-5 text-center pt-4 pb-4">Product details</h1>
+
+
+
+
+
+<div class="container-fluid ">
+  <div class="row" style="display:flex">
+
+
+  <div class="col-12 col-sm-6  col-md-4 offset-md-2  col-lg-4 offset-lg-2 col-xl-4 offset-xl-2 card" style="border:none">
+    <img class="card-img-top" src="https://www.decathlon.fr/media/{{product.image_path}}" alt="{{element.title}}">
+
+
+    </div>
+
+
+  <div class="col-12 col-sm-6 col-md-4  col-lg-4  col-xl-4 card pt-3" style="border:none">
+    <div class="card-body">
+      <h5 class="card-title">{{product.title}}</h5>
+      <p class="card-text">{{product.description}}</p>
+      <hr>
+      <h4 class="card-title">{{product.min_price}} €</h4>
+
+      {% if product.rating < 1  %}
+      <p>Customers rating:<span style="font-weight:bold"> {{product.rating}}</span>/5</p>
+      
+
+      {% elseif product.rating < 1.5  %}
+      <p>Customers rating:<span style="font-weight:bold"> {{product.rating}}</span>/5</p>
+      <img src="/images/ic_star1@2x.png" width="130"/>
+
+
+      {% elseif product.rating < 2.5  %}
+      <p>Customers rating:<span style="font-weight:bold"> {{product.rating}}</span>/5</p>
+      <img src="/images/ic_star2@2x.png" width="130"/>
+
+
+      {% elseif product.rating < 3.5  %}
+      <p>Customers rating:<span style="font-weight:bold"> {{product.rating}}</span>/5</p>
+      <img src="/images/ic_star3@2x.png" width="130"/>
+
+
+      {% elseif product.rating <= 4.5  %}
+      <p>Customers rating:<span style="font-weight:bold"> {{product.rating}}</span>/5</p>
+      <img src="/images/ic_star4@2x.png" width="130"/>
+
+
+      {% elif product.rating >4.5  %}
+      <p>Customers rating:<span style="font-weight:bold"> {{product.rating}}</span>/5</p>
+      <img src="/images/ic_star5@2x.png" width="130"/>
+      {% endif %}
+
+    <p class="mt-5">  <a href="http://www.decathlon.fr" class="btn btn-primary" style="background-color:#0082C3">Buy ></a></p>
+    </div>
+  </div>
+
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+<!--<p>{{myLabels}}</p>-->
+
+{% endblock %}

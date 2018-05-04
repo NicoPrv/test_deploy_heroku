@@ -1,0 +1,16 @@
+{
+  "name": "05_commerce_store_front",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "start":"node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "node-fetch": "^2.1.2",
+    "nunjucks": "^3.1.2"
+  }
+}
